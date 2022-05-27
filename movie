@@ -1,0 +1,23 @@
+import requests 
+from bs4 import BeautifulSoup
+
+cnt = 0
+year = int(input())
+
+url = f'https://movie.daum.net/ranking/boxoffice/yearly?date={year}'
+
+response = requests.get(url)
+
+if response.status_code == 200 :
+  html = response.text 
+  soup = BeautifulSoup(html,'html.parser')
+  test = soup.find_all('a',{'class':'link_txt'})
+  for code in test:
+    cnt+=1
+    print(cnt, code.get_text())
+    if cnt == 50 :
+      break
+
+else :
+  print('연결되지않음')
+  print(response.status_code)
