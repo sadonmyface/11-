@@ -38,6 +38,12 @@ f.close
 
 
 
+
+
+
+
+
+
 #학생2
 import requests 
 from bs4 import BeautifulSoup
@@ -84,3 +90,12 @@ user = input()
 n = title.index(user)
 print(date[2*n])
 print(date[2*n+1])
+
+# txt 파일 생성
+txt_file = []
+txt_file.append(date[2*n])
+txt_file.append(date[2*n+1])
+with open(f'{user} date&audience.txt','w') as f :
+  for i in txt_file :
+    f.write(f'{i} \n')
+f.close
