@@ -10,6 +10,8 @@ url = f'https://movie.daum.net/ranking/boxoffice/yearly?date={year}'
 
 response = requests.get(url)
 
+# 제목 생성
+
 if response.status_code == 200 :
   html = response.text 
   soup = BeautifulSoup(html,'html.parser')
