@@ -24,9 +24,15 @@ else :
   print('연결되지않음')
   print(response.status_code)
 
+# CSV 파일 생성
 
+rank = 0
+with open(f'{y}_movie_titles.txt','w') as f :
+  for i in title :
+    rank +=1
+    f.write(f'{rank} {i} \n')
 
-
+f.close
 
 
 
