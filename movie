@@ -1,4 +1,4 @@
-#학생1
+#학생1 : 년도를 치면 영화의 제목을 
 
 import requests 
 from bs4 import BeautifulSoup
@@ -44,7 +44,7 @@ f.close
 
 
 
-#학생2
+#학생2 : 년도, 제목을 입력하면 개봉날짜와 관객수를 출력
 import requests 
 from bs4 import BeautifulSoup
 
